@@ -323,6 +323,8 @@ open class CDMarkdownLabel: UILabel {
             self.selectedURLRange = nil
         case .stationary:
             break
+        @unknown default:
+            fatalError("Unknown touch phase.")
         }
 
         return avoidSuperCall
